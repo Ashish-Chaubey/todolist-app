@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-free-5.11.2-web (1)/fontawesome-free-5.11.2-web/css/all.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #5b75e2" style="height: 600px">
+    <div class="box w-50 h-75 mx-auto mt-5 py-5 ">
+        <div class="container w-75">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2>Wednesday, 22 Nov</h1>
+                </div>
+                <!-- <div class="icon text-center">
+                    +
+                </div> -->
+                <div class="rounded-circle d-flex justify-content-center align-items-center"
+                    style="width:70px; height:70px; background-color: #5b75e2" id="add-item">
+                    <p class="text-white h1">+</p>
+                </div>
+            </div>
+            <div class="tasks"><span id="task-item">3</span> tasks</div>
+            <div class="container py-5"></div>
+            <div>
+                <ul class="list-group" id="task-list">
+                    <li class="list-group-item d-flex justify-content-start align-items-center border-0">
+                        <div>
+                            <div class="text-primary rounded-circle border d-flex justify-content-center align-items-center mr-3"
+                                style="width:30px; height:30px;">
+                                <i class="fas fa-check d-none position-absolute checkmark-item"></i>
+                                <input type="checkbox" aria-hidden="true" class="textbox-item">
+                            </div>
+                        </div>
+                        <div class="d-flex text-item justify-content-between w-100 border-bottom">
+                            <p class="m-0">Cras justo odio</p>
+                            <span class="lead m-0 mytext">7:00 am</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                        <div>
+                            <div class="text-primary rounded-circle border d-flex justify-content-center align-items-center mr-3"
+                                style="width:30px; height:30px;">
+                                <i class="fas fa-check d-none position-absolute checkmark-item"></i>
+                                <input type="checkbox" aria-hidden="true" class="textbox-item">
+                            </div>
+                        </div>
+                        <div class="d-flex text-item justify-content-between w-100 border-bottom">
+                            <p class="m-0">Cras justo odio</p>
+                            <span class="lead m-0 mytext">7:00 am</span>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                        <div>
+                            <div class="text-primary rounded-circle border d-flex justify-content-center align-items-center mr-3"
+                                style="width:30px; height:30px;">
+                                <i class="fas fa-check d-none position-absolute checkmark-item"></i>
+                                <input type="checkbox" aria-hidden="true" class="textbox-item">
+                            </div>
+                        </div>
+
+                        <div class="d-flex text-item justify-content-between w-100 border-bottom">
+                            <p class="m-0">Cras justo odio</p>
+                            <span class="lead m-0 mytext">7:00 am</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <body style="background-color: #5b75e2" style="height: 600px">
+        <div class="box-reverse w-50 h-75 my-2 d-none mx-auto py-5 " id="box">
+            <div class="container w-75">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h2>Add New Task</h1>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <input type="text" class="form-control w-75" id="task" placeholder="Enter new task to complete">
+                    <div class="rounded-circle d-flex justify-content-center align-items-center"
+                        style="width:40px; height:40px; background-color: #5b75e2" id="submit-item">
+                        <p class="text-white h5 m-0 d-flex justify-content-center align-items-center"><i
+                                class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <script>
+            var taskListCheckBox = document.getElementsByClassName("textbox-item");
+            var taskList = document.getElementsByClassName("text-item");
+            var checkMarkList = document.getElementsByClassName("checkmark-item");
+
+            var listCounter = taskListCheckBox.length;
+
+
+            var countLabel = document.getElementById("task-item");
+            // ccountLabel
+            countLabel.innerHTML = listCounter;
+
+            for (let index = 0; index < taskListCheckBox.length; index++) {
+                const elementText = taskList[index];
+                const elementCheckbox = taskListCheckBox[index];
+                const elementCheckmark = checkMarkList[index];
+                elementCheckbox.addEventListener("click", function () {
+                    clickAction(elementCheckbox, elementText, elementCheckmark);
+                });
+            }
+            var clickAction = function (elementCheckbox, elementText, elementCheckmark) {
+                if (elementCheckbox.checked) {
+                    elementText.style.textDecoration = "line-through";
+                    listCounter--;
+                    elementCheckmark.classList.remove("d-none");
+                }
+                else {
+                    elementText.style.textDecoration = "none";
+                    listCounter++;
+                    elementCheckmark.classList.add("d-none");
+                }
+                countLabel.innerHTML = listCounter;
+            };
+
+            var boxArea = document.getElementById("box");
+
+            var newTextArea = function () {
+                boxArea.classList.remove("d-none");
+            }
+
+            var addButton = document.getElementById("add-item");
+            addButton.addEventListener("click", newTextArea);
+
+            $(document).ready(function () {
+                // $("#submit-item").on('click', function () {
+                $("#submit-item").click(function () {
+                    var x = $("#task").val();
+                    var txt2 = $("<li></li>").html('<div><div class="text-primary rounded-circle border d-flex justify-content-center align-items-center mr-3" style = "width:30px; height:30px;" ><i class="fas fa-check d-none position-absolute checkmark-item"></i><input type="checkbox" aria-hidden="true" class="textbox-item"></div></div ><div class="d-flex text-item justify-content-between w-100 border-bottom"><p class="m-0">' + x + '</p><span class="lead m-0 mytext">7:00 am</span></div>')
+                    $(txt2).addClass("list-group-item d-flex justify-content-between align-items-center border-0")
+                    $("#task-list").append(txt2);
+                });
+
+            });
+
+            // var addNewTask = function () {
+            //     var x = document.getElementById("task").value;
+            //     // console.log(x);
+            //     var list = document.getElementById("task-list");
+            //     var variableValue = x; //value from field
+            //     var node = document.createElement("LI");
+            //     var str = '<div><div class="text-primary rounded-circle border d-flex justify-content-center align-items-center mr-3" style = "width:30px; height:30px;" ><i class="fas fa-check d-none position-absolute checkmark-item"></i><input type="checkbox" aria-hidden="true" class="textbox-item"></div></div ><div class="d-flex text-item justify-content-between w-100 border-bottom"><p class="m-0">' + variableValue + '</p><span class="lead m-0 mytext">7:00 am</span></div>'
+            //     node.innerHTML = str;
+            //     node.classList.add('list-group-item');
+            //     node.classList.add('d-flex');
+            //     node.classList.add('justify-content-between');
+            //     node.classList.add('align-items-center');
+            //     node.classList.add('border-0');
+            //     list.appendChild(node);
+
+            //     listCounter++;
+            //     countLabel.innerHTML = listCounter;
+            //     boxArea.classList.add("d-none");
+            // }
+
+            // var addTask = document.getElementById("submit-item");
+            // addTask.addEventListener("click", addNewTask);
+
+        </script>
+    </body>
+
+</html>

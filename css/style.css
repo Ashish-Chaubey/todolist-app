@@ -1,0 +1,41 @@
+.box{
+    background-color: #fff;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 0px 0px 25px 15px #536bd0;
+}
+.box-reverse{
+    background-color: #fff;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 0px 0px 25px 15px #536bd0;
+}
+.icon{
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    background-color: #5972de;
+    font-size: 35px;
+    color: #fff;
+}
+
+#add-item, #add-item p{
+    cursor: pointer;
+}
+
+.mylist{
+    border:none;
+    border-bottom: 2px solid gray;
+    padding:0;
+    font-size: 20px;
+}
+.tasks{
+    font-size: 20px;
+    color: #5972de;
+    font-weight: bold;
+}
+.mytext{
+    font-size: 18px;
+}
+
+.textbox-item{
+    opacity: 0;
+}
